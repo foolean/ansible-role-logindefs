@@ -1,0 +1,37 @@
+# Copyright (c) 2023, Bennett Samowich <bennett@foolean.org>
+# All rights reserved
+# SPDX short identifier: BSD-3-Clause
+---
+
+# logindefs_inactive
+#   The number of days after a password expires until the account
+#   is permanently disabled
+#   (default: 30) Red: CIS
+logindefs_inactive: 30
+
+# logindefs_pass_max_days
+#   Maximum password age in days
+#   (default: 90) Ref: CIS
+logindefs_pass_max_days: 90
+
+# logindefs_pass_min_days
+#   Minimum number of days before a password can be changed
+#   (default: 7) Ref: CIS
+logindefs_pass_min_days: 7
+
+# logindefs_pass_min_len
+#   Minimum password length
+#   (default: 8)
+logindefs_pass_min_len: 8
+
+# logindefs_pass_warn_age
+#   Number of days before password expiration to warn the user
+#   (default: 7) Ref: CIS
+logindefs_pass_warn_age: 7
+
+# logindefs_umask
+#   The permission mask is initialized to this value. If not specified,
+#   the permission mask will be initialized to 022.
+#   (default: 077) Ref: CIS
+logindefs_umask: '077'
+

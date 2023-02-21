@@ -1,0 +1,33 @@
+# Copyright (c) 2023, Bennett Samowich <bennett@foolean.org>
+# All rights reserved
+# SPDX short identifier: BSD-3-Clause
+---
+
+# We put the entire role in a block so we can create
+# a role specific tag, which saves the caller from
+# having to do so in their playbook.
+- name: Role foolean/logindefs
+  block:
+
+  - name: CIS | Set Shadow Password Suite Parameters
+    become: true
+    ansible.builtin.template:
+      src: 'etc/login.defs.j2'
+      dest: '/etc/login.defs'
+      owner: 'root'
+      group: 'root'
+      mode: '0644'
+
+  - name: CIS | Ensure inactive password lock is 30 days or less
+    become: true
+    ansible.builtin.template:
+      src: 'etc/default/useradd.j2'
+      dest: '/etc/default/useradd'
+      owner: 'root'
+      group: 'root'
+      mode: '0644'
+
+  # Tags to be applied to this role (block)
+  # Tags to be applied to this role (block)
+  tags:
+    - 'role_foolean_logindefs'
