@@ -28,6 +28,5 @@
       mode: '0644'
 
   # Tags to be applied to this role (block)
-  # Tags to be applied to this role (block)
   tags:
     - 'role_foolean_logindefs'
