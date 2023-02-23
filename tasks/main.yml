@@ -9,23 +9,23 @@
 - name: Role foolean/logindefs
   block:
 
-  - name: CIS | Set Shadow Password Suite Parameters
-    become: true
-    ansible.builtin.template:
-      src: 'etc/login.defs.j2'
-      dest: '/etc/login.defs'
-      owner: 'root'
-      group: 'root'
-      mode: '0644'
+    - name: CIS | Set Shadow Password Suite Parameters
+      become: true
+      ansible.builtin.template:
+        src: 'etc/login.defs.j2'
+        dest: '/etc/login.defs'
+        owner: 'root'
+        group: 'root'
+        mode: '0644'
 
-  - name: CIS | Ensure inactive password lock is 30 days or less
-    become: true
-    ansible.builtin.template:
-      src: 'etc/default/useradd.j2'
-      dest: '/etc/default/useradd'
-      owner: 'root'
-      group: 'root'
-      mode: '0644'
+    - name: CIS | Ensure inactive password lock is 30 days or less
+      become: true
+      ansible.builtin.template:
+        src: 'etc/default/useradd.j2'
+        dest: '/etc/default/useradd'
+        owner: 'root'
+        group: 'root'
+        mode: '0644'
 
   # Tags to be applied to this role (block)
   tags:
