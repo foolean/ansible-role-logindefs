@@ -34,3 +34,7 @@ logindefs_pass_warn_age: 7
 #   the permission mask will be initialized to 022.
 #   (default: 077) Ref: CIS
 logindefs_umask: '077'
+
+# logindefs_encrypt_method
+#   Specify the default password hashing algorithm
+logindefs_encrypt_method: "{{ logindefs_default_encrypt_method }}"

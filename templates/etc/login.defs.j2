@@ -104,7 +104,7 @@ MD5_CRYPT_ENAB  no
 # Note: It is recommended to use a value consistent with
 # the PAM modules configuration.
 #
-ENCRYPT_METHOD  SHA512
+ENCRYPT_METHOD  {{ logindefs_encrypt_method }}
 
 #
 # Only used if ENCRYPT_METHOD is set to SHA256 or SHA512.

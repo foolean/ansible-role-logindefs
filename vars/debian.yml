@@ -6,3 +6,10 @@
 # logindefs_mail_dir
 #   Directory where mailboxes reside
 logindefs_mail_dir: '/var/mail'
+
+# logindefs_default_encrypt_method
+#   Specify the default password hashing algorithm
+#   This is used to set the per-operating system
+#   default and fulfill CIS-CAT auditing requirements
+#   yet still allow it to be overridden.
+logindefs_default_encrypt_method: 'yescrypt'
