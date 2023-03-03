@@ -1,0 +1,8 @@
+# Copyright (c) 2023, Bennett Samowich <bennett@foolean.org>
+# All rights reserved
+# SPDX short identifier: BSD-3-Clause
+---
+
+# logindefs_mail_dir
+#   Directory where mailboxes reside
+logindefs_mail_dir: '/var/spool/mail'

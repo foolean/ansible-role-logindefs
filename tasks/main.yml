@@ -9,6 +9,13 @@
 - name: Role foolean/logindefs
   block:
 
+    - name: Set OS variables
+      ansible.builtin.include_vars:
+        file: "{{ item }}"
+      with_first_found:
+        - "{{ ansible_os_family|lower }}.yml"
+        - "default.yml"
+
     - name: CIS | Set Shadow Password Suite Parameters
       become: true
       ansible.builtin.template:
